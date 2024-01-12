@@ -1,0 +1,48 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content"width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'blog/blog.css'%}">
+</head>
+<body>
+    <h1>
+    <img src="{% static 'blog/bloggis.png'%}" alt="blog" width="50" height="30">
+    Blog</h1>
+    {% if autori %}
+    <h2>Autori:</h2>
+    <ul>
+        {% for autor in autori %}
+        <li>{{autor}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if categorie %}
+    <h2>Kategórie:</h2>
+    <ul>
+        {% for categoria in categorie %}
+        <li>{{categoria}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if posty %}
+    <h2>Posty:</h2>
+        {% for post in posty %}
+        <div class= "kakac">
+        <h3>{{post.nazov}}</h3>
+        <p><strong>Autor: </strong>{{post.autor.meno}} {{post.autor.priezvisko}} ({{post.autor.username}})</p>
+        <p><strong>Dátum vytvorenia: </strong>{{post.datumvyt}}
+        <br>
+        <strong>Dátum zverejnenia: </strong>{{post.datumpub}}</p>
+        <p>{{post.text}}</p>
+        <br>
+        </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
+
+
+ 

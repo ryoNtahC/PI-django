@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #7BCF58;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+h1 img {
+    margin-right: 10px;
+}
+
+h2, h3 {
+    color: lightseagreen;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+
+.kakac{
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+
+.kakac h3{
+    color: #f96d00;
+
+}
+strong {
+    font-weight: bold;
+}

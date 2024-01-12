@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #555; /* Slightly darker grey for headings */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark grey header background */
+    color: #fff; /* White text color for header */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Content container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff; /* White content background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
