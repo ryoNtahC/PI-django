@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content"width=device-width, initial-scale=1.0">
+    <title>Eshop</title>
+</head>
+<body>
+    <h1>Moja Eshopik</h1>
+    {% if categorie %}
+    <h2>Kategorie:</h2>
+    <ul>
+        {% for categorie in categorie %}
+        <li>{{categorie}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if produkty %}
+    <h2>Produkty:</h2>
+    <ul>
+        {% for produkt in produkty %}
+        <li>{{produkt.nazov}}</li>
+        <li><strong>Popis: </strong>{{produkt.popis}}</li>
+        <li><strong>Kategoria: </strong>{{produkt.category}}</li>
+        <li><strong>Cena: {{produkt.cena}}</strong></li>
+
+        <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if uzivatelia %}
+    <h2>Zákaznik:</h2>
+    <ul>
+        {% for uzivatel in uzivatelia %}
+        <li><strong>Zákazník: </strong>{{uzivatel.username}}</li>
+        <li><strong>Email: </strong>{{uzivatel.email}}</li>
+        <li><strong>HEslo: </strong>{{uzivatel.heslo}}</li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if objednavky %}
+    <h2>Objednavky:</h2>
+    <ul>
+        {% for objednavka in objednavky %}
+        <li><strong>Zákazník: </strong>{{objednavka.zakaznik.username}}</li>
+        <li><strong>Produkt: </strong>{{objednavka.produkt.nazov}}</li>
+        <li><strong>Popis Produktu: </strong>{{objednavka.produkt.popis}}</li>
+        <li><strong>Datum vytvorenia: </strong>{{objednavka.datum}}</li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+<head>
