@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #1a1a1a;
     color: #ddd;
-    margin: 0;
+    margin: 10px; /* Adjust the margin as needed */
     padding: 0;
 }
 
@@ -19,17 +19,23 @@ h1 {
     color: #7BCF58;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    transition: 0.7s;
+    font-size: 45px;
 }
-
+h1:hover{
+    color:forestgreen;
+    transition: 0.7s;
+}
 
 h1 img {
     margin-right: 10px;
 }
 
-h2, h3 {
-    color: lightseagreen;
-    margin-bottom: 10px;
+h2 {
+    color: royalblue;
+    margin-bottom: 30px;
+    font-size: 35px;
 }
 
 ul {
@@ -40,21 +46,52 @@ li {
     margin-bottom: 5px;
 }
 
-
-
-.kakac{
-    padding: 10px;
+.kakac {
+    padding: 25px;
     border: 1px solid #555;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    margin-right: 18px;
+    margin-left: 18px;
     line-height: 1.5;
 }
 
-
-.kakac h3{
+.kakac h3 {
     color: #f96d00;
+    padding: 10px;
+    font-size: 27.3px;
+    transition: 0.7s;
 
 }
+
+.kakac:hover h3 {
+    color: yellow;
+    transition: 0.7s;
+}
+
+.jhoj {
+    padding: 25px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-right: 18px;
+    margin-left: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.jhoj ul li{
+    font-size: 25px;
+    color: orange;
+    transition: 0.7s;
+}
+
+.jhoj ul li:hover{
+    font-size: 25px;
+    color: #FFEa81;
+    transition: 0.7s;
+}
+
 strong {
     font-weight: bold;
 }

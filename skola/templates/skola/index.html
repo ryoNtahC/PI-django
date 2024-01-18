@@ -1,9 +1,11 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content"width=device-width, initial-scale=1.0">
     <title>Documents</title>
+    <link rel="stylesheet" href="{% static 'skola/skola.css'%}">
 </head>
 <body>
     <h1>Moja škola</h1>
@@ -32,6 +34,10 @@
         {% endfor %}
     </ul>
     {% endif %}
+
+    <div class="Img">
+        <img src="{% static 'skola/papa.png'%}" title="Velky nahnevany cerveny vtak - Terence" alt="Velky nahnevany cerveny vtak" >
+        </div>
 </body>
 </html>
 <head>

@@ -1,45 +1,117 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark grey text color */
+    background-color: #f8f8f8;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-h1, h2 {
-    color: #555; /* Slightly darker grey for headings */
+h1 {
+    color: #3498db;
+    font-size: 2em;
+    text-decoration: underline;
+    transition: 0.7s;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+h1:hover {
+    color: royalblue;
+    font-size: 3em;
+    text-decoration: underline;
+    transition: 0.7s;
 }
 
-li {
+h2 {
+    color: #2ecc71;
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Header styles */
-header {
-    background-color: #333; /* Dark grey header background */
-    color: #fff; /* White text color for header */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.kucharka {
+    margin: 20px 0; /* Adjusted margin for space between borders */
     padding: 10px;
-    text-align: center;
-}
-
-/* Content container styles */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff; /* White content background */
-    padding: 20px;
+    background-color: #ecf0f1;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
+.kucharka ul li{
+    font-size: 25px;
+    color:red;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.kucharka ul li:hover {
+    font-size: 45px;
+    color: blue;
+    transition: 0.7s;
+    text-align: center;
+
+}
+
+.kucharka p {
+    line-height: 1.5;
+}
+
+.kucharka3 {
+    margin: 20px 0; /* Adjusted margin for space between borders */
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kucharka3 ul li{
+    font-size: 25px;
+    color:red;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.kucharka3 p {
+    line-height: 1.5;
+}
+
+.peter {
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+strong {
+    color: #e74c3c;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .kucharka {
+        margin: 30px 0; /* Adjusted margin for space between borders in larger screens */
+        padding: 20px;
     }
 }

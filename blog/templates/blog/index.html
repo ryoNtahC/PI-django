@@ -13,19 +13,23 @@
     Blog</h1>
     {% if autori %}
     <h2>Autori:</h2>
+    <div class= "jhoj">
     <ul>
         {% for autor in autori %}
         <li>{{autor}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
     {% if categorie %}
     <h2>Kategórie:</h2>
+    <div class= "jhoj">
     <ul>
         {% for categoria in categorie %}
         <li>{{categoria}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
     {% if posty %}
     <h2>Posty:</h2>

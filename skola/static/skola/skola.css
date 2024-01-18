@@ -1,0 +1,80 @@
+/* skola.css */
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #39ff14;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-bottom: 2px solid #39ff14;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.9s;
+}
+
+h1:hover {
+    border-bottom: 2px solid #8A2BE2;
+    color: #8A2BE2;
+    transition: 0.9s;
+}
+
+
+h2 {
+    border-bottom: 2px solid #39ff14;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    transition: 0.9s;
+}
+
+h2:hover {
+    border-bottom: 2px solid #8A2BE2;
+    color: #8A2BE2;
+    transition: 0.9s;
+}
+
+li {
+    background-color: #333;
+    padding: 20.48px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 1.5s;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+li:nth-child(even) {
+    background-color: #444;
+}
+
+.Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li:hover {
+    background-color: #555;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: 1.5s;
+}

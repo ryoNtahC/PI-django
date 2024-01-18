@@ -1,36 +1,50 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content"width=device-width, initial-scale=1.0">
     <title>Eshop</title>
+        <link rel="stylesheet" href="{% static 'eshop/eshop.css'%}">
 </head>
 <body>
     <h1>Moja Eshopik</h1>
+    <div class="Img">
+    <img src="{% static 'eshop/pracka.png'%}" alt="pracka" height="200" width="200">
+    </div>
     {% if categorie %}
     <h2>Kategorie:</h2>
+    <div class="kucharka">
     <ul>
         {% for categorie in categorie %}
         <li>{{categorie}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
     {% if produkty %}
     <h2>Produkty:</h2>
+    <div class="kucharka1">
     <ul>
         {% for produkt in produkty %}
+        <div class="peter">
         <li>{{produkt.nazov}}</li>
+        <br>
+        </div>
         <li><strong>Popis: </strong>{{produkt.popis}}</li>
         <li><strong>Kategoria: </strong>{{produkt.category}}</li>
-        <li><strong>Cena: {{produkt.cena}}</strong></li>
+        <li><strong>Cena: {{produkt.cena}}€</strong></li>
 
+        <br>
         <br>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if uzivatelia %}
     <h2>Zákaznik:</h2>
+    <div class="kucharka3">
     <ul>
         {% for uzivatel in uzivatelia %}
         <li><strong>Zákazník: </strong>{{uzivatel.username}}</li>
@@ -39,9 +53,11 @@
         <br>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
     {% if objednavky %}
     <h2>Objednavky:</h2>
+    <div class="kucharka3">
     <ul>
         {% for objednavka in objednavky %}
         <li><strong>Zákazník: </strong>{{objednavka.zakaznik.username}}</li>
@@ -49,8 +65,11 @@
         <li><strong>Popis Produktu: </strong>{{objednavka.produkt.popis}}</li>
         <li><strong>Datum vytvorenia: </strong>{{objednavka.datum}}</li>
         <br>
+        <br>
+        <br>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
 </body>
 </html>
