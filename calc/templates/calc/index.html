@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulajda</title>
+</head>
+<body>
+    <h1>Kalkulajda</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="a" type="text">
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="b">
+        <input type="submit">
+    </form>
+    <h2>{{a}} {{operator}} {{b}} = {{vysledok}}</h2>
+</body>
+</html>
