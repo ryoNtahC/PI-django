@@ -1,0 +1,32 @@
+{% load static%}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'pocet/pocet.css'%}">
+    <title>Testovač</title>
+</head>
+<body>
+    <h1>Testovač</h1>
+    <form method="POST" id="myForm">
+        {% csrf_token %}
+        <h2>{{priklad.a}} {{priklad.operator}} {{priklad.b}} = <input name="vysledok" type="text"></h2>
+        {% if vysledok == 'Správne, si frajer!!!' %}
+        <h3 class="specific-value">{{vysledok}}</h3>
+        {% else %}
+        <h3>{{vysledok}}</h3>
+        {% endif %}
+        <input type="hidden" name="spravny_vysledok" value="{{priklad.vysledok}}">
+        <input type="hidden" name="skore" value="{{skore}}">
+        <h4>Správne: {{skore}}</h4>
+        <h4>Nesprávne: {{bad}}</h4>
+        <h4>High Score: {{bodiky}}</h4>
+        <input type="submit">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            alert("Odpoveď úspešne odoslaná!");
+        });
+    </script>
+</body>
+</html>
