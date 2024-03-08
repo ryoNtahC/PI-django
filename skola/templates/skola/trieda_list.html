@@ -1,35 +1,21 @@
-{% load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content"width=device-width, initial-scale=1.0">
-    <title>Documents</title>
-    <link rel="stylesheet" href="{% static 'skola/skola.css'%}">
-</head>
-<body>
-    {% if trieda %}
-    <h1>{{trieda}}</h1>
+{% extends "base.html" %}
+{% block content %}
+   {% if trieda %}
+   <div class="container pt-3">
+    <h2>Trieda: {{trieda}}</h2>
+   
     {% endif %}
     {% if ucitel %}
-    <h2>Triedny učitel:</h2>
-    <ul>
-        <li>{{ucitel}}</li>
-    </ul>
+    <p>Triedny učitel: {{ucitel}}</p>
     {% endif %}
 
     {% if studenti %}
-    <h2>Študenti:</h2>
-    <ul>
+    <h3>Študenti:</h2>
+    <ul class="list-group">
         {% for student in studenti %}
-        <li>{{student}}</li>
+        <li class="list-group-item">{{student}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
-
-    <div class="Img">
-        <img src="{% static 'skola/papa.png'%}" title="Veľký nahnevaný červený vták - Terence" alt="Veľký nahnevaný červený vták - Terence">
-        </div>
-</body>
-</html>
-<head>
+{%endblock %}

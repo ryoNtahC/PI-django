@@ -1,43 +1,34 @@
-{% load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content"width=device-width, initial-scale=1.0">
-    <title>Documents</title>
-    <link rel="stylesheet" href="{% static 'skola/skola.css'%}">
-</head>
-<body>
-    <h1>Moja škola</h1>
+{% extends "base.html" %}
+{% block content %}
     {% if triedy %}
-    <h2><a href="{% url 'triedy' %}">Triedy:</a></h2>
-    <ul>
+    <div class="container pt-3">
+    <h2>Triedy:</a></h2>
+    <ul class="list-group">
         {% for trieda in triedy %}
-        <li><a href="{% url 'trieda' trieda=trieda %}">{{trieda}}</a></li>
+        <li><a class="link-offset-2 link-underline link-underline-opacity-0 list-group-item" href="{% url 'trieda' trieda=trieda %}">{{trieda}}</a></li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
     {% if ucitelia %}
-    <h2><a href="{% url 'ucitelia' %}">Učitelia:</a></h2>
-    <ul>
+    <div class="container pt-3">
+    <h2>Učitelia:</a></h2>
+    <ul class="list-group">
         {% for ucitel in ucitelia %}
-        <li>{{ucitel}}</li>
+        <li class="link-offset-2 link-underline link-underline-opacity-0 list-group-item">{{ucitel}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if studenti %}
-    <h2><a href="{% url 'studenti' %}">Študenti:</a></h2>
-    <ul>
+    <div class="container pt-3">
+    <h2>Študenti:</a></h2>
+    <ul class="list-group"> 
         {% for student in studenti %}
-        <li>{{student}}</li>
+        <li class="link-offset-2 link-underline link-underline-opacity-0 list-group-item">{{student}}</li>
         {% endfor %}
     </ul>
+    </div>
     {% endif %}
-
-    <div class="Img">
-        <img src="{% static 'skola/papa.png'%}" title="Veľký nahnevaný červený vták - Terence" alt="Veľký nahnevaný červený vták - Terence">
-        </div>
-</body>
-</html>
-<head>
+{%endblock %}

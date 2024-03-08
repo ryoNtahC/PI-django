@@ -18,15 +18,9 @@
         <input type="hidden" name="spravny_vysledok" value="{{priklad.vysledok}}">
         <input type="hidden" name="skore" value="{{skore}}">
         <h4>Správne: {{skore}}</h4>
-        <h4>Nesprávne: {{bad}}</h4>
         <h4>High Score: {{bodiky}}</h4>
         <input type="submit">
     </form>
 
-    <script>
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-            alert("Odpoveď úspešne odoslaná!");
-        });
-    </script>
 </body>
 </html>
