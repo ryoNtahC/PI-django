@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+        {% if ucitel %}
+        <h1>Ucitel: {{ucitel.titul}} {{ucitel.meno}} {{ucitel.priezvisko}}</h1>
+        {% endif %}
+</header>
+<div class="container">
+
+        {% if triedos %}
+        <p> <strong>Triednym ucitelom: </strong> {{triedos}} </p>
+        {%endif%}
+    
+</div>
+{% endblock content %}

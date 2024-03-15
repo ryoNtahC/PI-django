@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+        {% if student %}
+        <h1>Student: {{student.meno}} {{student.priezvisko}}</h1>
+        {% endif %}
+</header>
+<div class="container">
+
+        {% if triedos %}
+        <p> <strong>Trieda: </strong> {{triedos}} </p>
+        {%endif%}
+
+        {% if ucitelos %}
+        <p> <strong>Triedny ucitel: </strong> {{ucitelos.titul}} {{ucitelos.meno}} {{ucitelos.priezvisko}} </p>
+        {%endif%}
+    
+</div>
+{% endblock content %}
