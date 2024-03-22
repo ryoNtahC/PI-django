@@ -10,5 +10,9 @@ urlpatterns = [
     path("triedy/<trieda>/", views.vypis_trieda, name='trieda'),
     path("student/<student>/", views.vypis_student, name='student'),
     path("ucitel/<ucitel>/", views.vypis_ucitel, name='ucitel'),
+    path("kruzky", views.vypis_kruzku, name='kruzky'),
+    path("kruzok/<kruzok>/", views.vypis_kruzok, name='kruzok'),
+
+
 
 ]

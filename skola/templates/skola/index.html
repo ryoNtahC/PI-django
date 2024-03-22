@@ -31,4 +31,15 @@
     </ul>
     </div>
     {% endif %}
+
+    {% if kruzky %}
+    <div class="container pt-3">
+    <h2>Krúžky:</a></h2>
+    <ul class="list-group"> 
+        {% for kruzok in kruzky %}
+        <li><a class="link-offset-2 link-underline link-underline-opacity-0 list-group-item" href="{% url 'kruzok' kruzok=kruzok %}" >{{kruzok}}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
 {%endblock %}

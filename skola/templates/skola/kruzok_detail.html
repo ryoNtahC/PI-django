@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h1>Krúžok: {{kruzok}}</h1>
+</header>
+<div class="container">
+    {% if ucitel %}
+    <p><strong>Pridelený pedagóg:</strong><a class="nav-link" href="{% url 'ucitel' ucitel=ucitel.id %}"> {{ucitel.titul}} {{ucitel.meno}} {{ucitel.priezvisko}}</a></p>
+    {% endif %}
+
+    {% if student %}
+    <h3>Študenti:</h2>
+    <ul class="list-group">
+        {% for student in student %}
+        <li class="list-group-item">{{student}}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+    
+</div>
+{% endblock content %}
