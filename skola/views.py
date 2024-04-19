@@ -41,14 +41,18 @@ def vypis_student(request, student):
     student = Student.objects.get(id = student)
     triedos = Trieda.objects.get(nazov = student.trieda)
     ucitelos = Ucitel.objects.get(trieda = triedos.id)
-    kruzkos = Kruzok.objects.get()
-    return render(request, 'skola/student_detail.html', {'student':student, 'triedos':triedos, 'ucitelos':ucitelos})
+    kruzky = Kruzok.objects.filter(student = student)
+    return render(request, 'skola/student_detail.html', {'student':student, 'triedos':triedos, 'ucitelos':ucitelos, 'kruzky':kruzky})
     
 
 def vypis_ucitel(request, ucitel):
     ucitel = Ucitel.objects.get(id = ucitel)
     triedos = Trieda.objects.get(nazov = ucitel.trieda)
-    return render(request, 'skola/ucitel_detail.html', {'ucitel':ucitel, 'triedos':triedos})
+    try:
+        kruzok = Kruzok.objects.get(ucitel = ucitel.pk)
+    except:
+        kruzok = ""
+    return render(request, 'skola/ucitel_detail.html', {'ucitel':ucitel, 'triedos':triedos, 'kruzok':kruzok})
 
 def vypis_kruzok(request, kruzok):
     kruzok = Kruzok.objects.get(nazov = kruzok)

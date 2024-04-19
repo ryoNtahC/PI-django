@@ -14,6 +14,14 @@
         {% if ucitelos %}
         <p> <strong>Triedny ucitel: </strong> {{ucitelos.titul}} {{ucitelos.meno}} {{ucitelos.priezvisko}} </p>
         {%endif%}
+
+        
+        {%if kruzky%}
+    <p>Krúžky: </p>
+    {% for kruzok in kruzky %}
+    <h5><a class= "link-offset-2 link-underline link-underline-opacity-0"   href="{% url 'kruzok' kruzok=kruzok.id %}" >{{kruzok}}</a></h5>
+    {%endfor%}
+    {%endif%}
     
 </div>
 {% endblock content %}

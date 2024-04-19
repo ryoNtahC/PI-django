@@ -5,18 +5,17 @@
 </header>
 <div class="container">
     {% if ucitel %}
-    <p><strong>Pridelený pedagóg:</strong><a class="nav-link" href="{% url 'ucitel' ucitel=ucitel.id %}"> {{ucitel.titul}} {{ucitel.meno}} {{ucitel.priezvisko}}</a></p>
+    <h4>Pridelený pedagóg: <a class= "link-offset-2 link-underline link-underline-opacity-0" href="{% url 'ucitel' ucitel=ucitel.id %}">{{kruzok.ucitel}}</a></h4>
     {% endif %}
 
-    {% if student %}
-    <h3>Študenti:</h2>
+    {%if student%}
+    <h3>Študenti: </h3>
     <ul class="list-group">
-        {% for student in student %}
-        <li class="list-group-item">{{student}}</li>
-        {% endfor %}
+    {% for student in student %}
+    <h5><a class= "link-offset-2 link-underline link-underline-opacity-0" href="{% url 'student' student=student.id %}">{{student}}</a></h5>
+    {%endfor%}
     </ul>
-    </div>
-    {% endif %}
+    {%endif%}
     
 </div>
 {% endblock content %}
