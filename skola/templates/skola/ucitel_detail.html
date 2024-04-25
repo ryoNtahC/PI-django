@@ -15,6 +15,8 @@
     <h4>Krúžok: </h4>
     <h5><a class= "link-offset-2 link-underline link-underline-opacity-0"   href="{% url 'kruzok' kruzok=kruzok %}" >{{kruzok.nazov}}</a></h5>
     {%endif%}
+    <h4>Bydlisko: {{ucitel.ulica}}, {{ucitel.psc}}, {{ucitel.obec}}</h4>
+    <h4>Dátum narodenia: {{ucitel.datum_narodenia}}</h4>
     
 </div>
 {% endblock content %}

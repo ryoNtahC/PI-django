@@ -22,6 +22,8 @@
     <h5><a class= "link-offset-2 link-underline link-underline-opacity-0"   href="{% url 'kruzok' kruzok=kruzok.id %}" >{{kruzok}}</a></h5>
     {%endfor%}
     {%endif%}
+    <h4>Bydlisko: {{student.ulica}}, {{student.psc}}, {{student.obec}}</h4>
+    <h4>Dátum narodenia: {{student.datum_narodenia}}</h4>
     
 </div>
 {% endblock content %}
