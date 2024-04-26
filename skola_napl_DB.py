@@ -28,12 +28,13 @@ for rocnik in range(1,5):
         triedy.append(f'{rocnik}.{pismeno}')
         #Trieda.objects.create(nazov=f'{rocnik}.{pismeno}')
 
-
+"""""
 triedy = []
 for rocnik in range(1,5):
     for pismeno in ['A','B','C','D']:
        triedy.append(f'{rocnik}.{pismeno}')
        Trieda.objects.create(nazov=f'{rocnik}.{pismeno}')
+"""""
 """""
 fmena = open('mena.txt', 'r', encoding='utf-8')
 mena = fmena.read().splitlines()
@@ -75,7 +76,7 @@ def ziskaj_datum(vek):
             den = random.randint(1,28)
     else:
         den = random.randint(1,30)
-    return f"{den}{"."} {mesiac}{"."} {rok_narodenia}"
+    return f"{den}. {mesiac}. {rok_narodenia}"
     
 
 

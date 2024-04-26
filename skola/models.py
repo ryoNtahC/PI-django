@@ -21,7 +21,7 @@ class Ucitel(models.Model):
     psc = models.CharField(max_length = 6, null=True)
     obec = models.CharField(max_length = 20, null=True)
     rok_narodenia = models.IntegerField(null=True)
-    datum_narodenia = models.CharField(max_length=10, null=True)
+    datum_narodenia = models.CharField(max_length=20, null=True)
 
     def __str__(self):
         if self.trieda:
@@ -59,7 +59,7 @@ class Student(models.Model):
     psc = models.CharField(max_length=6)
     ulica = models.CharField(max_length=50)
     rok_narodenia = models.IntegerField(null=True)
-    datum_narodenia = models.CharField(max_length=10, null=True)
+    datum_narodenia = models.CharField(max_length=20, null=True)
     vek = models.IntegerField(null=True)
 
     def __str__(self):
@@ -69,3 +69,20 @@ class Student(models.Model):
         verbose_name = "Študent"
         verbose_name_plural = "Študenti"
         ordering = ["priezvisko"]
+
+
+
+class Uzivatel(models.Model):
+    meno = models.CharField(max_length=20)
+    priezvisko = models.CharField(max_length=20)
+    email = models.EmailField()
+    datum = models.DateField()
+
+    def _str_ (self):
+        return f"{self.meno} {self.priezvisko}"
+    
+    
+    class Meta:
+        verbose_name = "Uživateľ"
+        verbose_name_plural = "Užívatelia"
+        ordering = ["priezvisko", "meno"]

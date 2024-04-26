@@ -12,7 +12,7 @@ urlpatterns = [
     path("ucitel/<ucitel>/", views.vypis_ucitel, name='ucitel'),
     path("kruzky", views.vypis_kruzku, name='kruzky'),
     path("kruzok/<kruzok>/", views.vypis_kruzok, name='kruzok'),
-
-
+    path("pridaj_uzivatel/", views.pridaj_uzivatel, name='pridaj_uzivatel'),
+    path("pridaj_uzivatel2/", views.pridaj_uzivatel2, name='pridaj_uzivatel2'),
 
 ]
